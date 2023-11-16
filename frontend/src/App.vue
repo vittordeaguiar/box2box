@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+import Home from './views/HomeView.vue';
+</script>
 
 <template>
-    <section class="container p-16">
-        <h1 class="text-white text-3xl font-bold">Box2Box</h1>
-    </section>
+    <Home />
 </template>
+
+<style scoped></style>
