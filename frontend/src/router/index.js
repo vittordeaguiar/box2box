@@ -1,11 +1,11 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter } from 'vue-router';
 // import axios from 'axios';
 // import store from '../stores/index';
 
 import HomeView from '../views/HomeView.vue';
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+    // history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
             path: '/',
