@@ -1,8 +1,18 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ["./src/**/*.html", "./src/**/*.vue"],
-  content: [],
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'black-cemetery': 'rgb(28, 33, 42)'
+      },
+      screens: {
+        'fold': '260px',
+      },
+    },
   },
   plugins: [],
-};
+}
