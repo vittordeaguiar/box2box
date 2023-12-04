@@ -2,9 +2,9 @@
       <div class="navbar">
             <iframe class="navbar-child" />
             <div class="navbar-item" />
-            <v-text-field class="navbar-inner" color="#000" clearable variant="outlined"
-                  :append-inner-icon="showPasswordBi ? 'mdi-eye' : 'mdi-eye-off'" v-model="passwordBi" :type="'search'"
-                  @click:appendInner="togglePasswordVisibilityBi" label="Buscar" />
+            <div class="navbar-inner">
+                  <input id="input" v-model="searchText" type="search" placeholder="Buscar..." />
+            </div>
             <div class="cadastre-se" @click="onCADASTRESETextClick">CADASTRE-SE</div>
             <div class="incio">Início</div>
             <div class="brasileiro" @click="onBrasileiroTextClick">Brasileirão</div>
@@ -57,6 +57,16 @@
       right: 33.4%;
       bottom: 44.08%;
       left: 21.88%;
+}
+
+#input {
+      
+      width: 100%;
+      height: 100%;
+      border: transparent;
+      padding: 10px;
+      outline: none;
+
 }
 
 .cadastre-se {
@@ -214,4 +224,5 @@
       font-size: 22px;
       color: #fff;
       font-family: Inter;
-}</style>
+}
+</style>
