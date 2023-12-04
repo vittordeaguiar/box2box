@@ -11,7 +11,7 @@
 
 <script lang="ts">
    import { defineComponent, ref } from 'vue'
-  //eslint-disable-next-line
+
  
 
 
@@ -21,7 +21,6 @@ export default defineComponent({
     const slides = ref([
       { id: 1, imageUrl: '/banner1.png' },
       { id: 2, imageUrl: '/banner2.png' },
-      // { id: 3, imageUrl: '/image3.jpg' },
     ])
     const currentSlideIndex = ref(0)
 
