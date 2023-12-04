@@ -12,15 +12,14 @@
             </div>
             <div class="comprar-2">
                 <div class="comprar-2-child" />
-                <div class="entrar">ENTRAR</div>
+                <div class="entrar" />
+                <button class="entrar" @click="onENTRARClick">ENTRAR</button>
             </div>
             <div class="digite-sua-senha">Digite sua senha </div>
             <div class="rectangle-parent">
                 <div class="comprar-2-child" />
-
                 <button class="criar-uma-conta" @click="onCRIARUMACONTAClick">CRIAR UMA CONTA</button>
-                
-                </div>
+            </div>
         </div>
     </div>
 </template>
