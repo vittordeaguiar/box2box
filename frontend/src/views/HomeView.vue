@@ -4,11 +4,9 @@ import Marcas from '../components/Marcas.vue';
 </script>
 
 <template>
-    <div>teste</div>
     <SlideCarroussel />
     <Marcas />
     <div class="lancamentos">Lançamentos</div>
-
 </template>
     
 <style scoped>
