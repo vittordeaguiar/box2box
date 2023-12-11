@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nokora:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial';
+    line-height: normal;
+}
+
+.bg-orange {
+    background-color: #ff5f2d;
+}
+
+.bg-gray {
+    background-color: #444444;
+}
+
+.btn-comprar {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    max-height: 40px;
+    border-radius: 12px;
+    background-color: #444444;
+    border: 2px solid #444444;
+    color: #ffffff;
+    transition:
+        background-color 300ms ease-in-out,
+        color 300ms ease-in-out;
+}
+
+.btn-comprar:hover {
+    background-color: #ffffff;
+    color: #444444;
+}
+
+.btn-consultar {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    max-height: 40px;
+    border-radius: 12px;
+    background-color: #ff5f2d;
+    border: 2px solid #ff5f2d;
+    color: #ffffff;
+    transition:
+        background-color 300ms ease-in-out,
+        color 300ms ease-in-out;
+}
+
+.btn-consultar:hover {
+    background-color: #ffffff;
+    color: #ff5f2d;
+}
+
+:root {
+    /* fonts */
+    --tipography-h1: Questrial;
+    --font-nokora: Nokora;
+    --tipography-paragraph: Inter;
+    --font-quicksand: Quicksand;
+
+    /* font sizes */
+    --tipography-paragraph-size: 15px;
+    --font-size-xl: 20px;
+    --font-size-2xs: 11px;
+    --tipography-h2-size: 22px;
+    --tipography-h1-size: 36px;
+    --font-size-lg: 18px;
+
+    /* Colors */
+    --color-white: #fff;
+    --color-black: #000;
+    --color-primary: #101010;
+    --color-secondary: #d9d9d9;
+    --color-secondaryhover: #ff5f2d;
+    --color-primaryhover: #3e3e3e;
+
+    /* Gaps */
+    --gap-3xl: 22px;
+
+    /* Paddings */
+    --padding-2xl: 21px;
+    --padding-264xl: 283px;
+    --padding-274xl: 293px;
+
+    /* Border radiuses */
+    --br-smi: 13px;
+    --br-2xs: 11px;
+    --br-3xs: 10px;
+    --br-75xl: 94px;
+}

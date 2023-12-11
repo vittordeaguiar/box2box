@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import HomeView from '../views/HomeView.vue';
 import LoginView from '../views/LoginUser.vue';
+import BuyShirtView from '../views/BuyShirtView.vue';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,12 @@ const router = createRouter({
             path: '/login',
             name: 'login',
             component: LoginView,
+        },
+        {
+            path: '/comprar/:id',
+            name: 'comprar',
+            component: BuyShirtView,
+            props: (route) => ({ id: route.params.id }),
         },
         {
             path: '/:catchAll(.*)',

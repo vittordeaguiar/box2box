@@ -2,6 +2,7 @@
 import NavBar from './components/NavBar.vue';
 // import Home from './views/HomeView.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import NewsletterForm from './components/NewsletterForm.vue';
 </script>
 
 <template>
@@ -11,8 +12,8 @@ import FooterComponent from './components/FooterComponent.vue';
         </nav>
         <div class="content-wrap flex-grow h-full">
             <router-view />
+            <NewsletterForm />
         </div>
-        <!-- <Home class="content-wrap flex-grow h-full" /> -->
         <footer>
             <FooterComponent />
         </footer>

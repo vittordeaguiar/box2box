@@ -6,15 +6,15 @@ import UmbroLogo from '../assets/images/Umbro_logo_PNG2.png';
 </script>
 
 <template>
-    <div class="container px-12 space-y-6">
-        <h1 class="font-bold text-4xl">As Melhores Marcas</h1>
-        <div class="w-full flex justify-between">
+    <section class="w-full px-12 py-12 space-y-6" style="background-color: #c9c9c9;">
+        <h1 class="text-4xl text-center">Melhores marcas</h1>
+        <div class="w-1/2 flex items-center justify-between mx-auto">
+            <img class="h-14" alt="Nike logo" :src="NikeLogo" />
             <img class="h-20" alt="Adidas logo" :src="AdidasLogo" />
-            <img class="h-20" alt="Nike logo" :src="NikeLogo" />
             <img class="h-20" alt="Puma Logo" :src="PumaLogo" />
-            <img class="h-20" alt="Umbro Logo" :src="UmbroLogo" />
+            <img class="h-28" alt="Umbro Logo" :src="UmbroLogo" />
         </div>
-    </div>
+    </section>
 </template>
 
 <style scoped>

@@ -1,17 +1,10 @@
-import { format } from 'date-fns';
+const EMAIL_REGEX = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
 
-export const pegarValor = (id) => {
-    return document.getElementById(id)?.value;
-};
-
-export const formatDateTime = (date) => {
-    if (!date) return 'Carregando...';
-    return format(new Date(date), 'dd/MM/yyyy');
-};
-
-export const formatDateTimeToInput = (date) => {
-    if (!date) return 'Carregando...';
-    return format(new Date(date), 'yyyy-MM-dd');
+export const validateEmail = async (email) => {
+    if (!email) {
+        return { valid: false, blank: true };
+    }
+    return { valid: EMAIL_REGEX.test(email), blank: false };
 };
 
 export const cortaTexto = (texto, tamanho) => {
@@ -31,11 +24,6 @@ export const cortaTexto = (texto, tamanho) => {
 
     // Adicione os pontos de reticência no final
     return `${truncated}...`;
-};
-
-export const addAtSymbol = (username) => {
-    const cleanedUsername = username.replace(/@|\s+/g, ''); // remove todos os "@" e espaço em branco
-    return '@' + cleanedUsername; // adiciona um "@" no início do username.
 };
 
 export const formatToMoney = (value) => {
@@ -169,64 +157,4 @@ export const extractPhoneNumberAndAreaCode = (celular) => {
         area_code: match[1],
         phone: match[2],
     };
-};
-
-export const divideName = (fullname) => {
-    const name_parts = fullname.trim().split(/\s+/);
-    const first_name = name_parts.shift();
-    const last_name = name_parts.join(' ');
-    return {
-        first_name,
-        last_name,
-    };
-};
-
-export const tempoDesdeHomenagem = (dateString) => {
-    const agora = new Date();
-    const homenagemDate = new Date(dateString);
-    const diff = Math.abs(agora - homenagemDate);
-
-    const segundos = Math.floor(diff / 1000);
-    const minutos = Math.floor(segundos / 60);
-    const horas = Math.floor(minutos / 60);
-    const dias = Math.floor(horas / 24);
-    const meses = Math.floor(dias / 30);
-    const anos = Math.floor(meses / 12);
-
-    if (anos > 0) {
-        return `${anos} ${anos === 1 ? 'ano' : 'anos'}`;
-    } else if (meses > 0) {
-        return `${meses} ${meses === 1 ? 'mês' : 'meses'}`;
-    } else if (dias > 0) {
-        return `${dias} ${dias === 1 ? 'dia' : 'dias'}`;
-    } else if (horas > 0) {
-        return `${horas} ${horas === 1 ? 'hora' : 'horas'}`;
-    } else if (minutos > 0) {
-        return `${minutos} ${minutos === 1 ? 'minuto' : 'minutos'}`;
-    }
-    return 'Há poucos segundos';
-};
-
-export const fallbackCopyTextToClipboard = (text) => {
-    let textArea = document.createElement('textarea');
-    textArea.value = text;
-
-    textArea.style.top = '0'; // evita o scroll para o elemento
-    textArea.style.left = '0';
-    textArea.style.position = 'fixed';
-
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-
-    try {
-        let successful = document.execCommand('copy');
-        if (!successful) {
-            throw new Error('Falha ao copiar texto.');
-        }
-    } catch (err) {
-        console.error('Falha ao copiar texto: ', err.message);
-    }
-
-    document.body.removeChild(textArea);
 };
