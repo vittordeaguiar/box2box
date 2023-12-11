@@ -20,5 +20,5 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
-        branch: gh-pages  # A branch onde o site será publicado
+        branch: gh-page  # A branch onde o site será publicado
         folder: dist      # A pasta onde os arquivos de build estão localizados
