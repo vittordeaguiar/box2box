@@ -22,3 +22,5 @@ jobs:
       with:
         branch: gh-page  # A branch onde o site será publicado
         folder: dist      # A pasta onde os arquivos de build estão localizados
+        token: ${{ secrets.GITHUB_TOKEN }}  # Usando o token padrão do GitHub
+
